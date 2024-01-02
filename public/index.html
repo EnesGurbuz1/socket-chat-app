@@ -20,15 +20,11 @@
       </form>
     </div>
 
-
-
-    
-
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
       $(function () {
-        var socket = io("http://192.168.0.159:3000"); //KENDİ IP ADRESİNİZİ GİRMELİSNİZ
+        var socket = io("http://192.168.0.159:3000"); //Sunucu PC nin ip adresi
 
         $("form").submit(function () {
           socket.emit("chat message", $("#m").val());
